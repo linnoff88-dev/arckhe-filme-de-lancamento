@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Film by Conversation — your launch film made just by talking with AI</title>
+<meta name="description" content="An open kit to make a launch film about 30 seconds long by talking with an AI, without video editing software.">
+<meta property="og:title" content="Your launch film made just by talking with AI">
+<meta property="og:description" content="Film by Conversation: an open kit to show your business in about 30 seconds, without video editing software.">
+<meta property="og:image" content="https://inematds.github.io/filme-de-lancamento/guia/assets/banner-en.jpg">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/filme-de-lancamento/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/filme-de-lancamento/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/filme-de-lancamento/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#FACC15; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    --link:#FACC15; --btn:#FACC15; --tint:rgba(250,204,21,.13); --nav:rgba(12,12,16,.78); --bad:#F0918A; --ok:#7CE0C6;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#a16207; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    --link:#854d0e; --tint:#FEF9C3; --nav:rgba(246,247,249,.86); --bad:#A83426; --ok:#0E6B55;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0;text-wrap:balance}
+  a{color:var(--link);text-decoration:none}
+  p a,li a{text-decoration:underline;text-underline-offset:3px}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:var(--nav);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:12px;height:60px}
+  nav .btn{padding:.45em .8em;font-size:.88rem}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb);white-space:nowrap}
+  nav .brand .emoji{font-size:1.2rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover,nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:11px;font-size:.84rem}
+  nav .links a.sec{color:var(--mut);white-space:nowrap} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:var(--tint)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--btn);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora;border:0;font-size:1rem;cursor:pointer;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:1300px){nav .links a.sec{display:none}}
+  @media(max-width:560px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px} html{scroll-padding-top:112px} nav .wrap>.sep{display:none} nav .brand{font-size:.88rem} nav .brand .emoji{font-size:1rem} nav .clubpro{margin-left:auto} nav .inema,nav .pro{font-size:.8rem}}
+  @media(max-width:380px){nav .brand .emoji{display:none}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(250,204,21,.16),transparent 70%);pointer-events:none}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 22px}
+  .hero h1{font-size:clamp(2.1rem,4.5vw,3.4rem);font-weight:800;letter-spacing:-.025em;margin-top:.35em}
+  .hero p.lead{font-size:1.16rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:44ch}
+  .hero p.precisa{font-size:.95rem;margin:1em 0 0;max-width:48ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:42px 0}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 26px}
+  .resumo figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .resumo img{width:100%;height:auto;display:block}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr);padding:44px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section.alt{background:var(--bg2)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em;margin-top:.3em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:66ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))} .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media(max-width:820px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:560px){.g2,.g3{grid-template-columns:minmax(0,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+  .card h3{font-size:1.05rem;margin-bottom:.45em}
+  .card p{color:var(--mut);font-size:.95rem;margin:0}
+  .card p+p{margin-top:.6em}
+  .card ul{color:var(--mut);font-size:.95rem;margin:.3em 0 0;padding-left:1.15em}
+  .label{display:block;font:600 .75rem Sora;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6em}
+  .label.bad{color:var(--bad)} .label.ok{color:var(--ok)}
+  .gap{margin-top:16px}
+  .filme{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#000}
+  .filme video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+  .fatos{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .fatos span{border:1px solid var(--line);border-radius:999px;padding:.3em .85em;font-size:.86rem;color:var(--mut);background:var(--card)}
+  .shot{margin:0 0 12px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:var(--tint);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .time{display:grid;grid-template-columns:82px minmax(0,1fr);gap:6px 16px;margin:0}
+  .time dt{font:800 .95rem Sora;color:var(--amb)} .time dd{margin:0 0 12px;color:var(--mut)}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:22px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--btn);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.1rem;margin-bottom:.25em}
+  .step p{color:var(--mut);margin:0}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;margin:12px 0;max-width:100%}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere}
+  .cola{font-size:.9rem}
+  .acoes{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 20px;margin-bottom:10px}
+  summary{cursor:pointer;font:600 1rem Sora}
+  details p{color:var(--mut);margin:.7em 0 0}
+  .fecho{margin-top:28px;font:600 1.15rem Sora}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:3px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🎬</span> Film by Conversation</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#explicado">What you gain</a>
+    <a class="sec" href="#dia">In your day</a>
+    <a class="sec" href="#como">How it works</a>
+    <a class="sec" href="#comecar">How to start</a>
+    <a class="sec" href="#prova">The proof</a>
+    <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/filme-de-lancamento" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">Film by Conversation · open kit</span>
+      <h1>Your launch film made just <span class="amb">by talking with AI</span></h1>
+      <p class="precisa">The kit is free. You need a computer and a paid plan: the cheapest plan with Claude Code cost <a href="https://claude.com/pricing" target="_blank" rel="noopener">US$ 20 per month</a> on 18/11/2026. Tested on Linux; Windows and Mac have not been tested yet.</p>
+      <p class="lead">Your business is up and running, and you have something new, a promotion, or a service to show. But it is still just a photo with a caption, and people do not understand what changed. With Film by Conversation, you explain what you want to show, the AI puts the scenes together, and you make changes by saying which second to fix.</p>
+      <div class="cta">
+        <a class="btn" href="#explicado">What you gain</a>
+        <a class="btn ghost" href="#comecar">How to start</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-en.jpg" width="1400" height="788" alt="Film by Conversation banner: a chat bubble comes out of a laptop and turns into a strip of film"></figure>
+  </div>
+</header>
+
+<section id="resumo" class="resumo"><div class="wrap">
+  <span class="chip">In one sentence</span>
+  <p>You have a good business, but no video that shows it. <strong>Film by Conversation</strong> is a free, open kit to make a launch film about 30 seconds long, without video editing software, by talking with Claude Code, an AI that creates files on your computer. It is for people with a small business, people looking for work, or people who want extra income and have never edited a video. You need a computer, a paid Claude plan, and photos of your business taken on a phone. Numbers are optional. The AI checks what needs to be installed.</p>
+  <figure><img src="../assets/banner-grade-en.jpg" width="1400" height="788" loading="lazy" alt="Six steps: tell the problem, show what is real, check the still frames, cut to the beat, review by the second, and add your brand"></figure>
+</div></section>
+
+<section id="filme" class="alt"><div class="wrap">
+  <span class="chip">The example</span>
+  <h2>Watch a film made with this method</h2>
+  <p class="sub">The example is about INEMA.CLUB itself. Turn on the sound: the music and sound effects are part of the method. This one is landscape, in a computer screen format. For WhatsApp and Instagram, you can ask for a portrait film at 1080x1920; this option has not been tested with the kit yet. The film and the frames in How it works are in Portuguese.</p>
+  <figure class="filme"><video controls preload="metadata" playsinline poster="../assets/poster.jpg" aria-label="Example launch film for INEMA.CLUB"><source src="../assets/filme-inema.mp4" type="video/mp4">Your browser could not open the video. <a href="../assets/filme-inema.mp4">Download the film</a>.</video></figure>
+  <div class="fatos"><span>28.9 seconds</span><span>7 scenes</span><span>music and sound effects</span><span>no video editing software</span></div>
+</div></section>
+
+<section id="explicado"><div class="wrap">
+  <span class="chip">What you gain</span>
+  <h2>You direct the film with words</h2>
+  <p class="sub">You do not need to learn about timelines, layers, or cuts. You need to know what you want to show and say what is wrong.</p>
+  <div class="grid g2">
+    <div class="card"><span class="label bad">✕ Before</span><h3>The video gets put off</h3><p>The new thing is ready, but the editor feels hard to use. It goes out as a photo with a caption.</p></div>
+    <div class="card"><span class="label ok">✓ After</span><h3>You talk until it looks right</h3><p>You tell the story, approve the images, and ask for each change in English until the film looks the way you want.</p></div>
+  </div>
+  <div class="grid g3 gap">
+    <div class="card"><h3>💬 A clear story</h3><p>The film starts with your customer's problem, and the product comes in as the answer.</p></div>
+    <div class="card"><h3>🔎 Real proof</h3><p>It uses photos of your business, real screens, and numbers you can show, if you have them.</p></div>
+    <div class="card"><h3>🎵 Film-like rhythm</h3><p>With music, the scenes change to the beat. Without music, the film has sound effects only.</p></div>
+  </div>
+</div></section>
+
+<section id="dia" class="alt"><div class="wrap">
+  <span class="chip">In your day</span>
+  <h2>How this changes your day</h2>
+  <p class="sub">Three situations where a short film can help.</p>
+  <div class="grid g3">
+    <div class="card"><h3>✂️ Fictional example: a salon</h3><p><strong>Today:</strong> the new opening hours become a photo in the status update.</p><p><strong>With the kit:</strong> phone photos become a film showing the customer's problem and the new hours, with no app and no numbers.</p></div>
+    <div class="card"><h3>📱 You made an app</h3><p><strong>Today:</strong> you explain everything in a long text.</p><p><strong>With the kit:</strong> real screens tell the story in about 30 seconds.</p></div>
+    <div class="card"><h3>🧭 You are looking for work</h3><p><strong>Today:</strong> you say you know how to use AI.</p><p><strong>With the kit:</strong> you show a finished sample privately to someone who might be interested.</p></div>
+  </div>
+  <div class="card gap">
+    <h3>Your film, step by step</h3>
+    <dl class="time">
+      <dt>Start</dt><dd>You explain your business and choose one of three stories.</dd>
+      <dt>Next</dt><dd>You pick real photos and screenshots, plus numbers if you have them.</dd>
+      <dt>Middle</dt><dd>You look at the still images and approve them.</dd>
+      <dt>End</dt><dd>You watch the film, point out the seconds that need fixing, and get a new version.</dd>
+    </dl>
+    <p>The total time depends on your materials and how many changes you ask for.</p>
+  </div>
+</div></section>
+
+<section id="video"><div class="wrap">
+  <span class="chip">Video</span>
+  <h2>How this film was made</h2>
+  <p class="sub">Behind the scenes, from the prompt to the final file. The video is in Portuguese.</p>
+  <figure class="filme"><video controls preload="none" playsinline poster="../assets/como-foi-feito.jpg" aria-label="Video about how the launch film was made, in Portuguese"><source src="../assets/como-foi-feito.mp4" type="video/mp4"></video></figure>
+</div></section>
+
+<section id="como" class="alt"><div class="wrap">
+  <span class="chip">How it works</span>
+  <h2>How it works, without jargon</h2>
+  <p class="sub">Think of a director with a very fast team. You give the direction, the AI does the work, and shows you the result.</p>
+  <div class="grid g3">
+    <div class="card"><figure class="shot"><img src="../assets/quadro-pilha.jpg" width="960" height="540" loading="lazy" alt="Opening scene with videos saved to watch later"></figure><span class="num">1</span><h3>Start with the problem</h3><p>The first scene shows something your customer recognizes.</p></div>
+    <div class="card"><figure class="shot"><img src="../assets/quadro-busca.jpg" width="960" height="540" loading="lazy" alt="Search for video with 53 courses found"></figure><span class="num">2</span><h3>Show what is real</h3><p>The example search shows the number and results displayed by the site.</p></div>
+    <div class="card"><figure class="shot"><img src="../assets/quadro-barras.jpg" width="960" height="540" loading="lazy" alt="Scene with the words Learn, Practice, and Grow"></figure><span class="num">3</span><h3>Check the still frames</h3><p>You look at each scene without movement, like checking a proof before printing.</p></div>
+    <div class="card"><figure class="shot"><img src="../assets/quadro-queda.jpg" width="960" height="540" loading="lazy" alt="Scene with the phrase The after never came"></figure><span class="num">4</span><h3>Cut to the beat</h3><p>The AI measures the music like a conductor keeping time, and the scenes follow.</p></div>
+    <div class="card"><figure class="shot"><img src="../assets/quadro-parede.jpg" width="960" height="540" loading="lazy" alt="Wall of courses with the number 385"></figure><span class="num">5</span><h3>Sound only for what you see</h3><p>Each sound effect matches an action on screen, like footsteps in a film.</p></div>
+    <div class="card"><figure class="shot"><img src="../assets/quadro-marca.jpg" width="960" height="540" loading="lazy" alt="Final scene with the INEMA.CLUB logo"></figure><span class="num">6</span><h3>Finish with your brand</h3><p>You provide the official logo, and the AI uses it as is, without redrawing it.</p></div>
+  </div>
+  <div class="card gap"><h3>What the kit does not promise</h3><p>It does not guarantee sales, followers, customers, or income. It helps you make and review the film. Business results depend on the product, who sees it, and what you do next.</p></div>
+</div></section>
+
+<section id="amostra"><div class="wrap">
+  <span class="chip">Sample method</span>
+  <h2>Show what you can do without asking people to take your word for it</h2>
+  <p class="sub">Make a short film for a business you like and send it only to the owner. If they say yes, you can talk.</p>
+  <div class="grid g3">
+    <div class="card"><span class="num">1</span><h3>Choose someone</h3><p>Look for a nearby store, a new app, or a creator you follow. Good product, weak video.</p></div>
+    <div class="card"><span class="num">2</span><h3>Make the sample</h3><p>Store: your own photos from the street. App: public screens, for the private sample only. Creator: text or illustration, no faces or videos. Make a 5 to 15 second clip, marked as an unofficial sample.</p></div>
+    <div class="card"><span class="num">3</span><h3>Send it privately</h3><p>Send it by WhatsApp, direct message, or the business's email. Send no more than one reminder after a week. Publish it only after they say yes.</p></div>
+  </div>
+  <p class="gap"><a href="https://github.com/inematds/filme-de-lancamento/blob/main/amostra/METODO-DA-AMOSTRA.md" target="_blank" rel="noopener">Read the full method, with ready-to-use messages (in Portuguese)</a></p>
+</div></section>
+
+<section id="comecar" class="alt"><div class="wrap">
+  <span class="chip">How to start</span>
+  <h2>How to start</h2>
+  <p class="sub">The AI reads the kit, explains the steps, and asks for your approval before changing anything.</p>
+  <div class="step"><div class="b">1</div><div><h3>Open the kit folder in Claude</h3><p>On Windows or Mac, <a href="https://code.claude.com/docs/en/desktop-quickstart" target="_blank" rel="noopener">install the Claude app</a>, sign in, and subscribe to a plan before opening the Code tab. Download the kit from <a href="https://github.com/inematds/filme-de-lancamento" target="_blank" rel="noopener">GitHub</a> using the Code and Download ZIP buttons, then unzip it. In the app, open the Code tab, choose Local, and use Open folder… to select the folder that contains COMECE-AQUI.md. You do not need the terminal. This is the official path, but it has not been tested with the kit yet. On Linux, where the kit was tested, the full instructions show how to open it.</p></div></div>
+  <div class="step"><div class="b">2</div><div><h3>Paste the prompt</h3><p>It helps the AI learn about the kit and ask about your business. To send photos and your logo, drag the files into the chat or tell the AI where they are, and ask it to organize them. The kit's prompts are written in Portuguese, and the AI can walk you through them in English.</p></div></div>
+  <div class="step"><div class="b">3</div><div><h3>Say yes when it makes sense</h3><p>The AI guides you one step at a time. To continue, just say "follow the file prompts/P1", and so on, without opening any files. You approve the story, the images, and each change.</p></div></div>
+  <pre class="cola" id="pedido">Read COMECE-AQUI.md and this project's prompts/ folder. Then explain in simple language how we will make a launch film about 30 seconds long for my business. Check what needs to be installed using the technical installation section of the README, and ask for my approval before installing anything. Ask one question at a time about the business, the problem it solves, and the real photos, screens, and numbers I have. Do not change any files before I say yes. Do not publish or send anything. Talk with me in English.</pre>
+  <div class="acoes">
+    <button class="btn" id="copiar" type="button" data-ok="Copied" data-erro="Select the text and copy it">Copy the prompt</button>
+    <a class="btn ghost" href="https://github.com/inematds/filme-de-lancamento/blob/main/COMECE-AQUI.md" target="_blank" rel="noopener">See the full instructions (in Portuguese)</a>
+  </div>
+</div></section>
+
+<section id="prova"><div class="wrap">
+  <span class="chip">The proof</span>
+  <h2>The example film uses real data</h2>
+  <p class="sub">These numbers show where the film's data comes from. They do not prove that a beginner can make their own film; that has not been measured yet.</p>
+  <div class="grid g3">
+    <div class="card"><h3>A real catalog search</h3><p>On 18/11/2026, in the <a href="https://www.inema.club/cursos/" target="_blank" rel="noopener">INEMA.CLUB catalog</a>, searching for "criar vídeo com IA" found 0 courses, and searching for "vídeo" found 53. The film shows the second search. The catalog had 385 course listings that day.</p></div>
+    <div class="card"><h3>About 20 seconds</h3><p>That was the time it took to generate the final file on this machine, with Linux ARM64 and 118 GB of memory. It does not include the conversation or the corrections. It takes longer on a typical computer.</p></div>
+    <div class="card"><h3>2 errors caught in still frames</h3><p>The review found an opening frame with half the screen empty and results in a different order from the site.</p></div>
+  </div>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+  <span class="chip">Questions</span>
+  <h2>Common questions</h2>
+  <p class="sub">What people often ask before they start.</p>
+  <details><summary>Do I need to know how to code?</summary><p>Not to direct the film: you talk with the AI. The AI handles the technical part, but you need to have Claude Code installed and approve what it does.</p></details>
+  <details><summary>Do I need to know how to edit video?</summary><p>No. You look at it, say what you want to change, and point to the second.</p></details>
+  <details><summary>How much does it cost, and what do I need?</summary><p>The kit is free, and the film is made on your own computer. The cheapest plan with Claude Code, Pro, cost US$ 20 per month on 18/11/2026 with monthly billing. With annual billing, it cost US$ 17 per month, with US$ 200 paid upfront. Check the current price on the <a href="https://claude.com/pricing" target="_blank" rel="noopener">official pricing page</a>.</p><p>The same page says you can cancel at any time in Settings > Billing, and your plan stays active until the end of the paid period. To avoid the next charge, cancel at least 24 hours before renewal.</p><p>Every plan has a usage limit, and we have not measured how much one film uses. If you run out, check Settings > Usage to see when it renews, wait, and continue in the same folder.</p><p>The AI may need to install free programs, and you approve each one first: Node.js runs the program that puts the film together, FFmpeg combines image and sound, Chrome draws each frame, and Python measures the music if you use any.</p></details>
+  <details><summary>Will it work on my computer?</summary><p>The kit was tested on Linux. Claude has official installations for Windows and Mac, but the kit has not been tested on them yet. Before you pay, check the <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">official Claude Code minimum requirements</a>: Windows 10 version 1809 or newer, or macOS 13 or newer, with 4 GB of memory, an x64 or ARM64 processor, and internet access. Meeting these minimums does not guarantee the film will work, and the minimum requirements for making it have not been measured.</p><p>Try this first: ask the AI to make the example film without changing anything. If it fails, copy the error message to the AI and try once. If that does not fix it, stop. There is no guarantee it will work on your computer.</p></details>
+  <details><summary>How do I move the video to my phone?</summary><p>Ask the AI to open the folder with the finished video. Then send the file to yourself using WhatsApp Web or email, and download it on your phone. The film is landscape; the portrait format has not been tested with the kit yet.</p></details>
+  <details><summary>Can I use the example's music for my business?</summary><p>No. It is for non-commercial use only. Your film can be made without music, with sound effects only. If you want music, one example is <a href="https://incompetech.com/music/royalty-free/faq.html" target="_blank" rel="noopener">Incompetech</a>: on 18/11/2026, the site listed a license that allows commercial use with credit to the author. Read the license before using it.</p></details>
+  <details><summary>Can I make a film for someone else's brand?</summary><p>As a private sample, marked as unofficial, using the official logo without changing it. Do not use other people's photos without permission or show customers' or employees' faces. Public app screens can be used only in the private sample. For a creator, use text, illustration, and their public name. If the business has no published brand rules, use the logo from its own website or profile and ask for permission before any public use.</p></details>
+  <details><summary>Does this guarantee customers?</summary><p>No. The kit helps you show what you have more clearly.</p></details>
+  <p class="fecho">Which of your customer's problems deserves a 30-second film? The kit is free: <a href="#comecar">download it in How to start</a>.</p>
+</div></section>
+
+<section id="tecnico"><div class="wrap">
+  <span class="chip">Technical section</span>
+  <h2>For people who want to run it by hand</h2>
+  <p class="sub">You do not need this section if you use the conversation with the AI. These commands check and generate the MP4 inside the film folder.</p>
+<pre>npx hyperframes@0.8.77 check
+npx hyperframes@0.8.77 render . -o renders/filme.mp4 --fps 30</pre>
+  <a class="btn ghost" href="https://github.com/inematds/filme-de-lancamento/blob/main/README.en.md#technical-setup" target="_blank" rel="noopener">See the technical installation instructions</a>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">HTML + GSAP</div><div class="pill">HyperFrames 0.8.77</div><div class="pill">Claude Code</div>
+    <p style="margin-top:18px">Film by Conversation · open kit ·
+      <a href="https://github.com/inematds/filme-de-lancamento">inematds/filme-de-lancamento</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='filme-de-lancamento-theme', b=document.body, t=document.getElementById('themeToggle');
+    function ler(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+    function gravar(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+    if(ler()==='light'){b.classList.add('light');t.textContent='☀️'}
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      gravar(light?'light':'dark');
+    });
+    var c=document.getElementById('copiar'), p=document.getElementById('pedido'), rotulo=c.textContent;
+    function avisa(m){c.textContent=m;setTimeout(function(){c.textContent=rotulo},2200)}
+    c.addEventListener('click',function(){
+      if(navigator.clipboard&&window.isSecureContext){
+        navigator.clipboard.writeText(p.textContent).then(function(){avisa(c.dataset.ok)},function(){avisa(c.dataset.erro)});
+      }else{
+        var r=document.createRange();r.selectNodeContents(p);var s=getSelection();s.removeAllRanges();s.addRange(r);
+        avisa(c.dataset.erro);
+      }
+    });
+  })();
+</script>
+</body>
+</html>

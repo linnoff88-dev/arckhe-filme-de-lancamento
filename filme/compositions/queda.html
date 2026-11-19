@@ -1,0 +1,33 @@
+<template>
+  <style>
+    @font-face { font-family: "Sora"; src: url("assets/fonts/Sora.ttf"); font-weight: 100 800; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #facc15; font-family: "Sora", sans-serif; }
+    #q-preto { position: absolute; inset: 0; background: #0c0c10; transform-origin: 50% 100%; }
+    .qc { position: absolute; width: 760px; height: 196px; background: #16161e; border: 1px solid #272730; color: #e9e9ee; border-radius: 14px; display: flex; align-items: center; gap: 28px; padding: 22px; }
+    .qc i { flex: 0 0 240px; height: 152px; border-radius: 8px; background: #272730; display: block; }
+    .qc b { font-size: 36px; line-height: 1.16; font-weight: 700; }
+    #q-t1 { position: absolute; left: 96px; top: 300px; width: 1700px; font-size: 190px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; color: #e9e9ee; }
+    #q-t2 { position: absolute; left: 96px; top: 700px; font-size: 76px; font-weight: 700; color: #facc15; letter-spacing: -0.02em; }
+  </style>
+  <div id="root" data-composition-id="queda" data-width="1920" data-height="1080">
+    <div id="q-preto"></div>
+    <div class="qc" id="qc1" style="left:1060px;top:800px"><i></i><b>Agente de IA do zero</b></div>
+    <div class="qc" id="qc2" style="left:1040px;top:660px"><i></i><b>Como automatizar tudo</b></div>
+    <div class="qc" id="qc3" style="left:1075px;top:520px"><i></i><b>O prompt que faltava</b></div>
+    <div class="qc" id="qc4" style="left:1035px;top:380px"><i></i><b>Vídeo com IA em casa</b></div>
+    <div class="qc" id="qc5" style="left:1070px;top:240px"><i></i><b>Claude Code na prática</b></div>
+    <div class="qc" id="qc6" style="left:1045px;top:100px"><i></i><b>Ver com calma depois</b></div>
+    <h2 id="q-t1">O depois não chegou.</h2>
+    <p id="q-t2">E a lista continua crescendo.</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#q-preto", { scaleY: 0 }, { scaleY: 1, duration: 0.42, ease: "power4.inOut" }, 0);
+    ["#qc1", "#qc2", "#qc3", "#qc4", "#qc5", "#qc6"].forEach((id, i) => {
+      tl.fromTo(id, { y: 0, rotation: 0 }, { y: 1500, rotation: (i % 2 ? 1 : -1) * (14 + i * 3), duration: 0.62, ease: "power2.in" }, 0.06 + i * 0.05);
+    });
+    tl.fromTo("#q-t1", { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 1.024);
+    tl.fromTo("#q-t2", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.26, ease: "power3.out" }, 2.56);
+    window.__timelines["queda"] = tl;
+  </script>
+</template>

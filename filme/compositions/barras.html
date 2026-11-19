@@ -1,0 +1,27 @@
+<template>
+  <style>
+    @font-face { font-family: "Sora"; src: url("assets/fonts/Sora.ttf"); font-weight: 100 800; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0c0c10; font-family: "Sora", sans-serif; }
+    #b-titulo { position: absolute; left: 96px; top: 84px; font-size: 84px; font-weight: 800; letter-spacing: -0.03em; color: #e9e9ee; }
+    .br { position: absolute; left: 0; height: 216px; background: #facc15; transform-origin: 0 50%; }
+    .bp { position: absolute; left: 96px; height: 216px; display: flex; align-items: center; font-size: 142px; font-weight: 800; letter-spacing: -0.03em; color: #0c0c10; }
+  </style>
+  <div id="root" data-composition-id="barras" data-width="1920" data-height="1080">
+    <h2 id="b-titulo">Troque a lista por um caminho.</h2>
+    <div class="br" id="br1" style="top:240px;width:1180px"></div>
+    <div class="br" id="br2" style="top:488px;width:1460px"></div>
+    <div class="br" id="br3" style="top:736px;width:1920px"></div>
+    <div class="bp" id="bp1" style="top:240px">Aprenda.</div>
+    <div class="bp" id="bp2" style="top:488px">Pratique.</div>
+    <div class="bp" id="bp3" style="top:736px">Evolua.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#b-titulo", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 0);
+    [0, 0.512, 1.024].forEach((t, i) => {
+      tl.fromTo("#br" + (i + 1), { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power4.out" }, t);
+      tl.fromTo("#bp" + (i + 1), { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, t + 0.08);
+    });
+    window.__timelines["barras"] = tl;
+  </script>
+</template>

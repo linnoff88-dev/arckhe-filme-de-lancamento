@@ -1,0 +1,31 @@
+<template>
+  <style>
+    @font-face { font-family: "Sora"; src: url("assets/fonts/Sora.ttf"); font-weight: 100 800; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0c0c10; font-family: "Sora", sans-serif; }
+    #p-grade { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; display: grid; grid-template-columns: repeat(4, 480px); grid-template-rows: repeat(4, 270px); transform-origin: 600px 405px; }
+    #p-grade img { width: 480px; height: 270px; object-fit: cover; display: block; }
+    #p-faixa { position: absolute; left: 0; top: 372px; width: 1920px; height: 336px; background: #facc15; transform-origin: 0 50%; }
+    #p-num { position: absolute; left: 96px; top: 372px; height: 336px; display: flex; align-items: center; gap: 44px; color: #0c0c10; }
+    #p-num b { font-size: 236px; font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
+    #p-num span { font-size: 78px; line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+  </style>
+  <div id="root" data-composition-id="parede" data-width="1920" data-height="1080">
+    <div id="p-grade">
+      <img id="g1" src="assets/banners/videos-ia.webp" alt="" /><img id="g2" src="assets/banners/jarvis.webp" alt="" /><img id="g3" src="assets/banners/execucao-longa.webp" alt="" /><img id="g4" src="assets/banners/skills.webp" alt="" />
+      <img id="g5" src="assets/banners/mods.webp" alt="" /><img id="g6" src="assets/banners/shorts-virais.webp" alt="" /><img id="g7" src="assets/banners/ia-na-pratica.webp" alt="" /><img id="g8" src="assets/banners/codex-claude.webp" alt="" />
+      <img id="g9" src="assets/banners/negocios-com-ia.webp" alt="" /><img id="g10" src="assets/banners/do-chat-ao-agente.webp" alt="" /><img id="g11" src="assets/banners/criando-seu-jarvis.webp" alt="" /><img id="g12" src="assets/banners/lance-sua-startup.webp" alt="" />
+      <img id="g13" src="assets/banners/ia-cultivada.webp" alt="" /><img id="g14" src="assets/banners/inemaseo.webp" alt="" /><img id="g15" src="assets/banners/gestao-agentes-2027.webp" alt="" /><img id="g16" src="assets/banners/consultoria-ia.webp" alt="" />
+    </div>
+    <div id="p-faixa"></div>
+    <div id="p-num"><b>385</b><span>cursos no<br />catálogo público</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const ordem = [6, 7, 11, 10, 2, 3, 8, 12, 5, 1, 15, 14, 9, 4, 16, 13];
+    ordem.forEach((n, i) => tl.fromTo("#g" + n, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power2.out" }, i === 0 ? 0 : 0.256 + i * 0.128));
+    tl.fromTo("#p-grade", { scale: 3.6 }, { scale: 1, duration: 2.56, ease: "power3.inOut" }, 0);
+    tl.fromTo("#p-faixa", { scaleX: 0 }, { scaleX: 1, duration: 0.26, ease: "power4.out" }, 3.584);
+    tl.fromTo("#p-num", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, 3.65);
+    window.__timelines["parede"] = tl;
+  </script>
+</template>

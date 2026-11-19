@@ -1,0 +1,18 @@
+<template>
+  <style>
+    @font-face { font-family: "Sora"; src: url("assets/fonts/Sora.ttf"); font-weight: 100 800; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #facc15; font-family: "Sora", sans-serif; color: #0c0c10; }
+    #m-1 { position: absolute; left: 96px; top: 250px; font-size: 230px; line-height: 1; font-weight: 800; letter-spacing: -0.045em; }
+    #m-2 { position: absolute; left: 96px; top: 560px; font-size: 128px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; }
+  </style>
+  <div id="root" data-composition-id="promessa" data-width="1920" data-height="1080">
+    <h2 id="m-1">Grátis.</h2>
+    <p id="m-2">Direto na internet.</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#m-1", { scale: 1.16, transformOrigin: "0 50%" }, { scale: 1, duration: 0.24, ease: "power4.out" }, 0);
+    tl.fromTo("#m-2", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.22, ease: "power3.out" }, 0.512);
+    window.__timelines["promessa"] = tl;
+  </script>
+</template>

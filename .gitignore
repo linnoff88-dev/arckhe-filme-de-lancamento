@@ -1,0 +1,7 @@
+captura/
+filme/snapshots/
+filme/renders/
+node_modules/
+__pycache__/
+longrun/
+guia/assets/*.codex.log

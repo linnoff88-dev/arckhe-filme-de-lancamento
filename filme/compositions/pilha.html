@@ -1,0 +1,32 @@
+<template>
+  <style>
+    @font-face { font-family: "Sora"; src: url("assets/fonts/Sora.ttf"); font-weight: 100 800; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #facc15; font-family: "Sora", sans-serif; color: #0c0c10; }
+    #pilha-titulo { position: absolute; left: 96px; top: 150px; width: 860px; font-size: 118px; line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; }
+    #pilha-rotulo { position: absolute; left: 96px; top: 800px; font-size: 40px; font-weight: 700; }
+    .pc { position: absolute; width: 760px; height: 196px; background: #0c0c10; color: #e9e9ee; border-radius: 14px; display: flex; align-items: center; gap: 28px; padding: 22px; }
+    .pc i { flex: 0 0 240px; height: 152px; border-radius: 8px; background: #272730; position: relative; display: block; }
+    .pc i::after { content: ""; position: absolute; left: 102px; top: 50px; border-left: 46px solid #facc15; border-top: 27px solid transparent; border-bottom: 27px solid transparent; }
+    .pc b { font-size: 36px; line-height: 1.16; font-weight: 700; }
+  </style>
+  <div id="root" data-composition-id="pilha" data-width="1920" data-height="1080">
+    <h1 id="pilha-titulo">Mais um vídeo de IA salvo para ver depois.</h1>
+    <p id="pilha-rotulo">E mais um. E mais um.</p>
+    <div class="pc" id="pc1" style="left:1060px;top:800px"><i></i><b>Agente de IA do zero</b></div>
+    <div class="pc" id="pc2" style="left:1040px;top:660px"><i></i><b>Como automatizar tudo</b></div>
+    <div class="pc" id="pc3" style="left:1075px;top:520px"><i></i><b>O prompt que faltava</b></div>
+    <div class="pc" id="pc4" style="left:1035px;top:380px"><i></i><b>Vídeo com IA em casa</b></div>
+    <div class="pc" id="pc5" style="left:1070px;top:240px"><i></i><b>Claude Code na prática</b></div>
+    <div class="pc" id="pc6" style="left:1045px;top:100px"><i></i><b>Ver com calma depois</b></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#pilha-rotulo", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.24);
+    ["#pc1", "#pc2", "#pc3", "#pc4", "#pc5", "#pc6"].forEach((id, i) => {
+      const giro = [-2, 1.5, -1, 2, -1.5, 1][i];
+      if (i === 0) { tl.set(id, { rotation: giro }, 0); return; }
+      tl.fromTo(id, { y: -1200, rotation: giro * 5 }, { y: 0, rotation: giro, duration: 0.3, ease: "power3.in" }, 0.404 + (i - 1) * 0.512);
+    });
+    window.__timelines["pilha"] = tl;
+  </script>
+</template>
