@@ -31,7 +31,7 @@ Você vai fazer um filme de cerca de 30 segundos para o seu negócio. Você conv
 1. **Instale e abra a pasta do kit.**
    - **Windows ou Mac (ainda sem teste com o kit):** baixe o app Claude na [página oficial](https://code.claude.com/docs/pt/desktop-quickstart), instale e entre na sua conta. No Windows ele fica no menu Iniciar; no Mac, em Aplicativos.
    - **Assine o plano antes de abrir a aba Code.** Sem plano pago, a aba pede a assinatura.
-   - **Baixe o kit:** em https://github.com/inematds/filme-de-lancamento, use o botão **Code** e depois **Download ZIP**. Descompacte o arquivo.
+   - **Baixe o kit:** em https://github.com/linnoff88-dev/filme-de-lancamento, use o botão **Code** e depois **Download ZIP**. Descompacte o arquivo.
    - **Abra a pasta sem terminal:** no app, clique na aba **Code**. Abaixo da caixa de texto, escolha **Local** e, no controle ao lado, **Open folder…**. O ZIP pode criar uma pasta dentro de outra: escolha a pasta onde aparece o arquivo `COMECE-AQUI.md`.
    - **Linux (testado):** [instale o Claude Code](https://code.claude.com/docs/pt/setup), abra o terminal dentro da pasta do kit e digite `claude`.
 2. **Cole o pedido abaixo.** A IA confere o que falta no computador. Quando ela pedir para instalar algo, responda sim se ela disse o que é e para que serve. Se não entender, escreva "explique de forma simples".

@@ -30,7 +30,7 @@ Frase final: [FRASE FINAL]
 Regras:
 - Use o arquivo do logo sem redesenhar, recolorir, distorcer ou gerar outro parecido.
 - Se o logo estiver ruim ou faltar, pare e me peça o arquivo.
-- Procure tudo o que ainda é do exemplo: nome INEMA, inema.club, banners, números,
+- Procure tudo o que ainda é do exemplo: nome ARCKHÉ, ARCKHÉ AI, banners, números,
   textos de curso e a trilha. Me mostre a lista antes de trocar.
 - Use apenas textos, números e telas já aprovados nos passos anteriores.
 - Se a licença de uma fonte ou imagem não estiver clara, pergunte.

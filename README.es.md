@@ -1,6 +1,6 @@
 # Película por conversación
 
-[![Película por conversación: tu película de lanzamiento hecha solo conversando con la IA](guia/assets/banner-es.jpg)](https://inematds.github.io/filme-de-lancamento/guia/es/)
+[![Película por conversación: tu película de lanzamiento hecha solo conversando con la IA](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -14,7 +14,7 @@ Tienes un buen negocio y ningún video que lo muestre. **Película por conversac
 
 ## 📖 Guía de uso
 
-Guía completa, sin términos técnicos: **https://inematds.github.io/filme-de-lancamento/guia/es/**
+Guía completa, sin términos técnicos: **https://linnoff88-dev.github.io/
 
 ¿Es tu primera vez? Abre [COMECE-AQUI.md](COMECE-AQUI.md).
 
@@ -50,7 +50,7 @@ Después, solo tienes que pedir `sigue el archivo prompts/P1`, y así sucesivame
 
 ## La película de ejemplo
 
-El ejemplo habla del propio INEMA.CLUB: [`guia/assets/filme-inema.mp4`](guia/assets/filme-inema.mp4). Dura 28,9 s, está en 1920x1080, a 30 cuadros por segundo, y tiene 7 escenas, música y efectos.
+El ejemplo habla del propio ARCKHÉ AI: [`guia/assets/filme-ARCKHÉ.mp4`](guia/assets/filme-ARCKHÉ.mp4). Dura 28,9 s, está en 1920x1080, a 30 cuadros por segundo, y tiene 7 escenas, música y efectos.
 
 ---
 
@@ -121,7 +121,7 @@ Cada escena es una página HTML en `filme/compositions/`, animada con GSAP. `fil
 ### Las cifras del ejemplo
 
 - Música: 117,2 BPM, un ritmo cada 0,512 s, medido por `ferramentas/mapa_batidas.py`. Los cambios ocurren a los 8,896 s y 17,088 s.
-- Búsqueda en [inema.club/cursos](https://www.inema.club/cursos/), el 18/11/2026: "criar vídeo com IA" dio 0 cursos; "vídeo" dio 53. El catálogo tenía 385 fichas de cursos.
+- Búsqueda en [ARCKHÉ AI/cursos](https://www.ARCKHÉ AI/cursos/), el 18/11/2026: "criar vídeo com IA" dio 0 cursos; "vídeo" dio 53. El catálogo tenía 385 fichas de cursos.
 - La revisión de los cuadros fijos detectó dos errores: el primer cuadro tenía la mitad de la pantalla vacía y los resultados aparecían en un orden distinto al del sitio.
 
 ## Licencia
@@ -130,4 +130,4 @@ El código y los textos de este kit: [MIT](LICENSE). La música del ejemplo es s
 
 ---
 
-Hecho por [INEMA.CLUB](https://inema.club).
+Hecho por [ARCKHÉ AI](https://ARCKHÉ AI).

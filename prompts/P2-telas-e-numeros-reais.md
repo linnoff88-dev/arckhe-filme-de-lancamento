@@ -2,7 +2,7 @@
 
 **Para que serve:** garantir que a prova do filme existe de verdade.
 
-**Exemplo do kit:** a busca por "criar vídeo com IA" em inema.club/cursos deu 0 cursos. A busca por "vídeo" deu 53. O filme mostra a segunda, com o número e os resultados na ordem em que apareceram no site.
+**Exemplo do kit:** a busca por "criar vídeo com IA" em ARCKHÉ AI/cursos deu 0 cursos. A busca por "vídeo" deu 53. O filme mostra a segunda, com o número e os resultados na ordem em que apareceram no site.
 
 **Sem app ou site?** Fotos do negócio feitas no celular valem como prova. Números entram só se você tiver.
 

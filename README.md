@@ -1,4 +1,4 @@
-﻿# Filme por conversa
+# Filme por conversa
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,7 +6,7 @@
 </div>
 
 
-[![Filme por conversa: seu filme de lanÃ§amento feito sÃ³ conversando com a IA](guia/assets/banner.jpg)](https://inematds.github.io/filme-de-lancamento/guia/)
+[![Filme por conversa: seu filme de lanÃ§amento feito sÃ³ conversando com a IA](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/
 
 **ðŸ‡§ðŸ‡· [PortuguÃªs](README.md) Â· ðŸ‡ºðŸ‡¸ [English](README.en.md) Â· ðŸ‡ªðŸ‡¸ [EspaÃ±ol](README.es.md)**
 
@@ -20,7 +20,7 @@ VocÃª tem um negÃ³cio bom e nenhum vÃ­deo que mostre isso. O **filme por c
 
 ## ðŸ“– Guia de uso
 
-Guia completo, sem termos tÃ©cnicos: **https://inematds.github.io/filme-de-lancamento/guia/**
+Guia completo, sem termos tÃ©cnicos: **https://linnoff88-dev.github.io/
 
 Primeira vez? Abra o [COMECE-AQUI.md](COMECE-AQUI.md).
 
@@ -54,7 +54,7 @@ Depois, basta pedir `siga o arquivo prompts/P1`, e assim por diante. VocÃª nÃ
 
 ## O filme de exemplo
 
-O exemplo fala do prÃ³prio INEMA.CLUB: [`guia/assets/filme-inema.mp4`](guia/assets/filme-inema.mp4). SÃ£o 28,9 s em 1920x1080, a 30 quadros por segundo, com 7 cenas, mÃºsica e efeitos.
+O exemplo fala do prÃ³prio ARCKHÉ AI: [`guia/assets/filme-ARCKHÉ.mp4`](guia/assets/filme-ARCKHÉ.mp4). SÃ£o 28,9 s em 1920x1080, a 30 quadros por segundo, com 7 cenas, mÃºsica e efeitos.
 
 ---
 
@@ -125,7 +125,7 @@ Cada cena Ã© uma pÃ¡gina HTML em `filme/compositions/`, animada com GSAP. O 
 ### Os nÃºmeros do exemplo
 
 - Trilha: 117,2 BPM, uma batida a cada 0,512 s, medida por `ferramentas/mapa_batidas.py`. As viradas caem em 8,896 s e 17,088 s.
-- Busca em [inema.club/cursos](https://www.inema.club/cursos/), em 18/11/2026: "criar vÃ­deo com IA" deu 0 cursos; "vÃ­deo" deu 53. O catÃ¡logo tinha 385 fichas de curso.
+- Busca em [ARCKHÉ AI/cursos](https://www.ARCKHÉ AI/cursos/), em 18/11/2026: "criar vÃ­deo com IA" deu 0 cursos; "vÃ­deo" deu 53. O catÃ¡logo tinha 385 fichas de curso.
 - A revisÃ£o por quadros parados pegou dois erros: o primeiro quadro com metade da tela vazia e os resultados em ordem diferente da do site.
 
 ## LicenÃ§a
@@ -134,7 +134,7 @@ CÃ³digo e textos deste kit: [MIT](LICENSE). A trilha do exemplo Ã© sÃ³ par
 
 ---
 
-Feito pelo [INEMA.CLUB](https://inema.club).
+Feito pelo [ARCKHÉ AI](https://ARCKHÉ AI).
 
 ---
 

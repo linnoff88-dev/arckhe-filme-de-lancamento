@@ -1,6 +1,6 @@
 # Film by Conversation
 
-[![Film by Conversation: your launch film made just by talking with AI](guia/assets/banner-en.jpg)](https://inematds.github.io/filme-de-lancamento/guia/en/)
+[![Film by Conversation: your launch film made just by talking with AI](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -14,7 +14,7 @@ You have a good business, but no video to show it. **Film by Conversation** is a
 
 ## 📖 User guide
 
-Full guide, without technical terms: **https://inematds.github.io/filme-de-lancamento/guia/en/**
+Full guide, without technical terms: **https://linnoff88-dev.github.io/
 
 First time? Open [COMECE-AQUI.md](COMECE-AQUI.md).
 
@@ -50,7 +50,7 @@ After that, just ask `follow the file prompts/P1`, and so on. You don’t need t
 
 ## The sample film
 
-The sample is about INEMA.CLUB itself: [`guia/assets/filme-inema.mp4`](guia/assets/filme-inema.mp4). It’s 28.9 s long, at 1920x1080 and 30 frames per second, with 7 scenes, music, and sound effects.
+The sample is about ARCKHÉ AI itself: [`guia/assets/filme-ARCKHÉ.mp4`](guia/assets/filme-ARCKHÉ.mp4). It’s 28.9 s long, at 1920x1080 and 30 frames per second, with 7 scenes, music, and sound effects.
 
 ---
 
@@ -121,7 +121,7 @@ Each scene is an HTML page in `filme/compositions/`, animated with GSAP. `filme/
 ### The sample’s numbers
 
 - Soundtrack: 117.2 BPM, one beat every 0.512 s, measured by `ferramentas/mapa_batidas.py`. The turning points fall at 8.896 s and 17.088 s.
-- Search on [inema.club/cursos](https://www.inema.club/cursos/), on 18/11/2026: "criar vídeo com IA" returned 0 courses; "vídeo" returned 53. The catalog had 385 course listings.
+- Search on [ARCKHÉ AI/cursos](https://www.ARCKHÉ AI/cursos/), on 18/11/2026: "criar vídeo com IA" returned 0 courses; "vídeo" returned 53. The catalog had 385 course listings.
 - Reviewing the still frames caught two errors: the first frame had half the screen empty, and the results were in a different order from the website.
 
 ## License
@@ -130,4 +130,4 @@ The kit’s code and text: [MIT](LICENSE). The sample soundtrack is for non-comm
 
 ---
 
-Made by [INEMA.CLUB](https://inema.club).
+Made by [ARCKHÉ AI](https://ARCKHÉ AI).

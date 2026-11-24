@@ -1,10 +1,10 @@
 # Filme por conversa
 
-Kit aberto do INEMA para fazer um filme de lançamento de cerca de 30 s conversando com uma IA de código. O render é local, com HyperFrames.
+Kit aberto do ARCKHÉ para fazer um filme de lançamento de cerca de 30 s conversando com uma IA de código. O render é local, com HyperFrames.
 
 ## Conta e autor
 
-Repo `inematds/filme-de-lancamento`. Autor e committer: `inematds <inematds@gmail.com>`.
+Repo `linnoff88-dev/filme-de-lancamento`. Autor e committer: `linnoff88-dev <linnoff88-dev@gmail.com>`.
 
 ## Testes
 
@@ -16,7 +16,7 @@ Repo `inematds/filme-de-lancamento`. Autor e committer: `inematds <inematds@gmai
 
 - **Não citar a origem.** Nenhum arquivo do repo cita material, autor, comunidade, marca ou exemplo de terceiros que tenha inspirado o método. Escreva com palavras próprias. A lista de nomes vetados fica fora do repo, com o mantenedor. Rode a busca dessa lista antes de todo commit.
 - Só números verificados. Sem preço de mercado e sem promessa de renda ou resultado.
-- PT é a fonte. Ao mudar README ou guia, atualize também EN e ES com `inema-traduz`.
+- PT é a fonte. Ao mudar README ou guia, atualize também EN e ES com `ARCKHÉ-traduz`.
 - Mudou o fluxo? Atualize "O processo, do início ao fim" no README no mesmo commit.
 - `filme/` está validado: só mude com pedido explícito e rode os testes depois.
-- Design do guia: `~/projetos/inema-design/DESIGN.md`, seção 2.
+- Design do guia: `~/projetos/ARCKHÉ-design/DESIGN.md`, seção 2.

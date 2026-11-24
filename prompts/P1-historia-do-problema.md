@@ -2,7 +2,7 @@
 
 **Para que serve:** decidir o que o filme conta antes de desenhar qualquer coisa.
 
-**Exemplo do kit:** o filme do INEMA abre com vídeos salvos "para ver depois", mostra que esse depois não chegou e só então apresenta o caminho.
+**Exemplo do kit:** o filme do ARCKHÉ abre com vídeos salvos "para ver depois", mostra que esse depois não chegou e só então apresenta o caminho.
 
 **Exemplo fictício de serviço local:** o Salão da Rua, nome inventado, não tem app nem números. A história usa fotos do celular: a cliente quer horário no fim do dia e descobre que o salão agora abre até mais tarde.
 
