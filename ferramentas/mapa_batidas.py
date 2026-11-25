@@ -3,8 +3,8 @@
 
 Uso: python3 ferramentas/mapa_batidas.py trilha.wav [--saida mapa.json]
 
-Saída: BPM estimado, duração de uma batida, primeira batida e os momentos em que a
-energia mais sobe. Esses momentos são os candidatos para a entrada do logo.
+Saída: BPM estimado, duraçêo de uma batida, primeira batida e os momentos em que a
+energia mais sobe. Esses momentos sêo os candidatos para a entrada do logo.
 """
 import argparse
 import json

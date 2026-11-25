@@ -12,7 +12,7 @@ Assista ao filme inteiro, em `filme/renders/filme.mp4`, com o som ligado.
 ## Som
 
 - [ ] Ouvi o filme com meus próprios ouvidos.
-- [ ] Cada efeito acompanha uma ação visível.
+- [ ] Cada efeito acompanha uma açêo visível.
 - [ ] Se há música, as trocas importantes acontecem junto com ela.
 - [ ] Nenhum som estoura ou cobre o resto.
 

@@ -12,7 +12,7 @@
 |---|---|---|
 | `[MÚSICA]` | Onde está o arquivo de áudio, ou "sem música". WAV é o formato que a ferramenta mede; se o seu for outro, a IA avisa e converte | `filme/assets/audio/minha-trilha.wav` |
 | `[LICENÇA]` | Onde você conferiu que pode usar. Para negócio, escolha uma biblioteca de música que permita uso comercial | Recibo salvo em `licencas/` |
-| `[VIRADAS]` | Momentos mais fortes da história | Entrada da solução e entrada da prova |
+| `[VIRADAS]` | Momentos mais fortes da história | Entrada da soluçêo e entrada da prova |
 
 ## Cole na IA
 
@@ -23,18 +23,18 @@ Música: [MÚSICA]
 Licença conferida em: [LICENÇA]
 Momentos fortes da história: [VIRADAS]
 
-Se eu escrevi "sem música", tire a trilha do filme, pule a medição e proponha tempos que
+Se eu escrevi "sem música", tire a trilha do filme, pule a mediçêo e proponha tempos que
 deixem cada texto ser lido com calma. Caso contrário:
 
 1. Na raiz do projeto, rode:
    python3 ferramentas/mapa_batidas.py [MÚSICA]
-2. Me diga o BPM, a duração de uma batida, a primeira batida e as maiores subidas de energia.
+2. Me diga o BPM, a duraçêo de uma batida, a primeira batida e as maiores subidas de energia.
 3. Proponha uma tabela com cena, início, fim e a batida usada.
 4. Coloque as viradas da história nas maiores subidas de energia.
 5. Depois do meu sim, ajuste os tempos em filme/index.html e anime as cenas.
 
 Regras: todo começo de cena cai em uma batida. Texto fica tempo suficiente para ser lido.
-Não mude as palavras aprovadas. Se o arquivo não for WAV, avise antes de converter.
+Nêo mude as palavras aprovadas. Se o arquivo nêo for WAV, avise antes de converter.
 ```
 
 ## Deu certo quando

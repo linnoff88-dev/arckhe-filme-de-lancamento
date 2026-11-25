@@ -1,12 +1,12 @@
-# P6 · Revisão por segundo
+# P6 · Revisêo por segundo
 
-**Para que serve:** transformar "não gostei" em uma correção que a IA consegue executar.
+**Para que serve:** transformar "nêo gostei" em uma correçêo que a IA consegue executar.
 
 **Quando usar:** depois que a IA gerou o vídeo no P7 e você assistiu com o [checklist depois de gerar](../checklists/depois-de-gerar.md).
 
 **A fórmula:** no segundo X, Y está errado; troque por Z.
 
-**Exemplo do kit:** a revisão pegou resultados de busca em ordem diferente da do site. O pedido certo diz o segundo, o erro e a ordem que deve ficar.
+**Exemplo do kit:** a revisêo pegou resultados de busca em ordem diferente da do site. O pedido certo diz o segundo, o erro e a ordem que deve ficar.
 
 ## Campos
 
@@ -24,7 +24,7 @@ Assisti ao filme em filme/renders/filme.mp4. Corrija só estes pontos:
 - No segundo [SEGUNDO], [O QUE ESTÁ ERRADO]; troque por [COMO DEVE FICAR].
 - No segundo [SEGUNDO], [O QUE ESTÁ ERRADO]; troque por [COMO DEVE FICAR].
 
-Não mude mais nada. Depois de corrigir, dentro de filme/:
+Nêo mude mais nada. Depois de corrigir, dentro de filme/:
 1. gere um quadro parado de cada segundo citado:
    npx hyperframes@0.8.77 snapshot . --at seguido dos segundos citados, separados por vírgula
 2. abra esses quadros e confirme se cada ponto ficou certo;
@@ -32,7 +32,7 @@ Não mude mais nada. Depois de corrigir, dentro de filme/:
 4. renderize de novo:
    npx hyperframes@0.8.77 render . -o renders/filme.mp4 --fps 30
 
-Me responda com uma linha por ponto: corrigido ou não, e o que você viu no quadro.
+Me responda com uma linha por ponto: corrigido ou nêo, e o que você viu no quadro.
 ```
 
 ## Deu certo quando

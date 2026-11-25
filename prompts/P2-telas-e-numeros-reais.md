@@ -10,9 +10,9 @@
 
 | Campo | O que escrever | Exemplo |
 |---|---|---|
-| `[FOTOS]` | Arraste as fotos e prints para a conversa ou diga onde estão no computador | Anexei na conversa |
+| `[FOTOS]` | Arraste as fotos e prints para a conversa ou diga onde estêo no computador | Anexei na conversa |
 | `[SITE OU APP]` | Endereço do produto, se houver | padariasol.exemplo |
-| `[NÚMEROS]` | Cada número e de onde ele vem, ou "não tenho" | 120 reservas em outubro, planilha de pedidos |
+| `[NÚMEROS]` | Cada número e de onde ele vem, ou "nêo tenho" | 120 reservas em outubro, planilha de pedidos |
 | `[DATA]` | Quando você conferiu | 18/11/2026 |
 
 ## Cole na IA
@@ -25,20 +25,20 @@ Site ou app: [SITE OU APP]
 Números e fontes: [NÚMEROS]
 Conferido em: [DATA]
 
-Faça uma tabela com: cena da história, material que prova, arquivo ou fonte, e situação
+Faça uma tabela com: cena da história, material que prova, arquivo ou fonte, e situaçêo
 (pronto, falta ou duvidoso). Olhe cada imagem antes de usar.
 
 Regras:
-- Não invente tela, cliente, depoimento, preço ou número.
+- Nêo invente tela, cliente, depoimento, preço ou número.
 - Ao recriar uma tela, mantenha os textos, os números e a ordem exatos.
-- Não mostre dado pessoal, senha, e-mail, telefone ou nome de cliente.
+- Nêo mostre dado pessoal, senha, e-mail, telefone ou nome de cliente.
 - Organize os arquivos no projeto para mim.
-- Pergunte se quem aparece nas fotos autorizou. Sem autorização, a foto fica fora.
-- Se o filme for amostra para outro negócio, não use fotos de terceiros sem permissão nem
+- Pergunte se quem aparece nas fotos autorizou. Sem autorizaçêo, a foto fica fora.
+- Se o filme for amostra para outro negócio, nêo use fotos de terceiros sem permissêo nem
   rostos de clientes ou funcionários. Prefira fotos minhas do local visto da rua,
-  ilustração ou texto. Para app, use telas públicas só na amostra privada. Para criador,
-  use texto, ilustração e o nome público, sem o rosto nem os vídeos da pessoa.
-- Se um número não tiver fonte, tire do filme e me avise.
+  ilustraçêo ou texto. Para app, use telas públicas só na amostra privada. Para criador,
+  use texto, ilustraçêo e o nome público, sem o rosto nem os vídeos da pessoa.
+- Se um número nêo tiver fonte, tire do filme e me avise.
 
 Me mostre a tabela e espere meu sim antes de mudar qualquer arquivo.
 ```

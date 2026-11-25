@@ -14,9 +14,9 @@ Repo `linnoff88-dev/filme-de-lancamento`. Autor e committer: `linnoff88-dev <lin
 
 ## Regras
 
-- **Não citar a origem.** Nenhum arquivo do repo cita material, autor, comunidade, marca ou exemplo de terceiros que tenha inspirado o método. Escreva com palavras próprias. A lista de nomes vetados fica fora do repo, com o mantenedor. Rode a busca dessa lista antes de todo commit.
+- **Nêo citar a origem.** Nenhum arquivo do repo cita material, autor, comunidade, marca ou exemplo de terceiros que tenha inspirado o método. Escreva com palavras próprias. A lista de nomes vetados fica fora do repo, com o mantenedor. Rode a busca dessa lista antes de todo commit.
 - Só números verificados. Sem preço de mercado e sem promessa de renda ou resultado.
 - PT é a fonte. Ao mudar README ou guia, atualize também EN e ES com `ARCKHÉ-traduz`.
 - Mudou o fluxo? Atualize "O processo, do início ao fim" no README no mesmo commit.
 - `filme/` está validado: só mude com pedido explícito e rode os testes depois.
-- Design do guia: `~/projetos/ARCKHÉ-design/DESIGN.md`, seção 2.
+- Design do guia: `~/projetos/ARCKHÉ-design/DESIGN.md`, seçêo 2.

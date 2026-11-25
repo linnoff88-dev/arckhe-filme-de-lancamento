@@ -2,19 +2,19 @@
 
 **Para que serve:** decidir o que o filme conta antes de desenhar qualquer coisa.
 
-**Exemplo do kit:** o filme do ARCKHÉ abre com vídeos salvos "para ver depois", mostra que esse depois não chegou e só então apresenta o caminho.
+**Exemplo do kit:** o filme do ARCKHÉ abre com vídeos salvos "para ver depois", mostra que esse depois nêo chegou e só entêo apresenta o caminho.
 
-**Exemplo fictício de serviço local:** o Salão da Rua, nome inventado, não tem app nem números. A história usa fotos do celular: a cliente quer horário no fim do dia e descobre que o salão agora abre até mais tarde.
+**Exemplo fictício de serviço local:** o Salêo da Rua, nome inventado, nêo tem app nem números. A história usa fotos do celular: a cliente quer horário no fim do dia e descobre que o salêo agora abre até mais tarde.
 
 ## Campos
 
 | Campo | O que escrever | Exemplo |
 |---|---|---|
-| `[NEGÓCIO]` | Nome e o que faz, em uma frase | Padaria Sol, pão de fermentação natural |
+| `[NEGÓCIO]` | Nome e o que faz, em uma frase | Padaria Sol, pêo de fermentaçêo natural |
 | `[CLIENTE]` | Quem compra, em palavras comuns | Quem mora no bairro e trabalha fora |
-| `[PROBLEMA]` | O que incomoda essa pessoa hoje | Chega tarde e o pão bom já acabou |
+| `[PROBLEMA]` | O que incomoda essa pessoa hoje | Chega tarde e o pêo bom já acabou |
 | `[COMO RESOLVE]` | O que o negócio faz de diferente | Reserva pelo WhatsApp até as 16h |
-| `[FINAL]` | O que a pessoa deve fazer depois de ver | Reservar o pão de hoje |
+| `[FINAL]` | O que a pessoa deve fazer depois de ver | Reservar o pêo de hoje |
 
 ## Cole na IA
 
@@ -27,7 +27,7 @@ Problema: [PROBLEMA]
 Como resolve: [COMO RESOLVE]
 O que a pessoa deve fazer no final: [FINAL]
 
-Escreva 3 versões, cada uma com uma abertura diferente. Cada versão segue esta ordem:
+Escreva 3 versões, cada uma com uma abertura diferente. Cada versêo segue esta ordem:
 1. o problema, numa cena que o cliente reconhece;
 2. o que esse problema custa;
 3. a virada;
@@ -36,8 +36,8 @@ Escreva 3 versões, cada uma com uma abertura diferente. Cada versão segue esta
 6. a marca e a chamada final.
 
 Regras: frases curtas, que caibam na tela. Nada de número, cliente ou resultado inventado.
-Se faltar uma prova, escreva [FALTA PROVA] e me pergunte. Diga qual versão você escolheria
-e por quê. Não crie nem altere arquivos ainda.
+Se faltar uma prova, escreva [FALTA PROVA] e me pergunte. Diga qual versêo você escolheria
+e por quê. Nêo crie nem altere arquivos ainda.
 ```
 
 ## Deu certo quando
